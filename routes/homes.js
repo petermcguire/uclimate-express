@@ -4,7 +4,7 @@ var sensorsRouter = require('./sensors');
 
 /* GET homes */
 router.get('/', function(req, res, next) {
-  res.send('');
+  res.status(200).json({});
 });
 
 /* GET home with homeID */
