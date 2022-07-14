@@ -3,3 +3,4 @@ docker run -d --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=password time
 sleep 3
 npx sequelize db:create
 npx sequelize db:migrate
+npx sequelize db:seed:all
