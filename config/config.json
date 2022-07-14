@@ -1,5 +1,5 @@
 {
-  "development": {
+  "dev": {
     "username": "postgres",
     "password": "password",
     "database": "uclimate-dev",
@@ -12,7 +12,7 @@
   "test": {
     "username": "postgres",
     "password": "password",
-    "database": "uclimate-dev",
+    "database": "uclimate-test",
     "host": "localhost",
     "port": "5432",
     "dialect": "postgres",

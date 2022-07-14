@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Sensor.belongsTo(models.Home);
+      Sensor.belongsTo(models.Home, {foreignKey: 'id'});
     }
   }
   Sensor.init({

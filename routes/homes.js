@@ -11,8 +11,13 @@ router.get('/', async (req, res, next) => {
 });
 
 /* GET home with homeID */
-router.get('/:homeID', function(req, res, next) {
-  res.send('');
+router.get('/:homeID', async (req, res, next) => {
+  const home = await Home.findAll({
+    where: {
+      id: req.params.homeID
+    }
+  });
+  res.status(200).json(home);
 });
 
 router.use('/:homeID/sensors', sensorsRouter);
