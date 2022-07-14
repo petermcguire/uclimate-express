@@ -2,11 +2,18 @@
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Homes', [{
-      name: 'My House',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }], {});
+    await queryInterface.bulkInsert('Homes', [
+      {
+        name: 'My House 1',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        name: 'My House 2',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ], {});
   },
 
   async down(queryInterface, Sequelize) {

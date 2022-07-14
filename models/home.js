@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Home.hasMany(models.Sensor);
+      Home.hasMany(models.Sensor, {foreignKey: 'id'});
     }
   }
   Home.init({

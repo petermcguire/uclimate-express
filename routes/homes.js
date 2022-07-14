@@ -2,14 +2,22 @@ var express = require('express');
 var router = express.Router();
 var sensorsRouter = require('./sensors');
 
+const Home = require('../models').Home
+
 /* GET homes */
-router.get('/', function(req, res, next) {
-  res.status(200).json({});
+router.get('/', async (req, res, next) => {
+  const homes = await Home.findAll();
+  res.status(200).json(homes);
 });
 
 /* GET home with homeID */
-router.get('/:homeID', function(req, res, next) {
-  res.send('');
+router.get('/:homeID', async (req, res, next) => {
+  const home = await Home.findAll({
+    where: {
+      id: req.params.homeID
+    }
+  });
+  res.status(200).json(home);
 });
 
 router.use('/:homeID/sensors', sensorsRouter);
