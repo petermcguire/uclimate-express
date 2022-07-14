@@ -4,7 +4,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Sensors', [{
       name: 'My temp sensor',
-      homeId: 2,
+      homeId: 1,
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});

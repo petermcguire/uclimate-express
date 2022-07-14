@@ -12,17 +12,12 @@
   "test": {
     "username": "postgres",
     "password": "password",
-    "database": "uclimate-test",
+    "database": "uclimate-dev",
     "host": "localhost",
     "port": "5432",
     "dialect": "postgres",
     "protocol": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    }
+    "ssl": false
   },
   "production": {
     "username": "postgres",
