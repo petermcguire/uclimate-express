@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "cross-env NODE_ENV=test jest --testTimeout=10000 --detectOpenHandles",
+    "test": "cross-env NODE_ENV=test npm run db-uninstall && npm run db-install && npm run db-build-test && jest --testTimeout=10000 --detectOpenHandles",
     "db-install": "./scripts/db-install.sh",
     "db-uninstall": "./scripts/db-uninstall.sh",
     "db-build-test": "cross-env-shell NODE_ENV=test ./scripts/db-build.sh",
